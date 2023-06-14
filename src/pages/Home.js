@@ -1,5 +1,13 @@
 import { Layout, Menu, theme, Typography, Col, Divider, Row } from "antd";
 import { useState, useRef } from "react";
+import { createFromIconfontCN } from "@ant-design/icons";
+import {FaBeer} from 'react-icons/fa'
+import {AiFillAmazonCircle} from 'react-icons/ai'
+import {DiJavascript1} from 'react-icons/di'
+
+
+
+
 
 const { Title, Text } = Typography;
 
@@ -15,6 +23,13 @@ const style2 = {
 
   color: "white",
 };
+
+const IconFont = createFromIconfontCN({
+  scriptUrl : [
+    '//at.alicdn.com/t/font_1788044_0dwu4guekcwr.js', // icon-javascript, icon-java, icon-shoppingcart (overridden)
+    '//at.alicdn.com/t/font_1788592_a5xf2bdic3u.js', // icon-shoppingcart, icon-python
+  ]
+})
 
 const Home = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -134,12 +149,44 @@ const Home = () => {
                 {" "}
               </Col>
             </Row>
+
+            <Row gutter={[32, 16]}>
+              <Col style={style2} span={2}>
+              <IconFont style={{fontSize : 25}}  type="icon-javascript" />
+              
+              </Col>
+              <Col style={style2} span={2}>
+              <IconFont style={{fontSize : 25}} 
+               type="icon-java" />
+   
+              </Col>
+              <Col style={style2} span={2} >
+              
+                  <IconFont style={{fontSize : 25}}  type="icon-python" />
+              </Col>
+              <Col style={style2} span={2} >
+
+                  <IconFont style={{fontSize : 25}}  type="icon-php" />
+              </Col>
+            </Row>
+
+            <Row gutter={[32, 16]}>
+              <Col style={style2} span={5}>
+                <FaBeer />
+              </Col>
+              <Col style={style2} span={2}>    
+                 <AiFillAmazonCircle style={{fontSize:50}} spin/>
+              </Col>
+              <Col style={style2} span={2} >
+              </Col>
+            </Row>
+
             <Row gutter={[32, 16]}>
               <Col style={style2} span={5}></Col>
-              <Col style={style2} span={10}></Col>
-
-              <Col style={style2} span={5} />
+              <Col style={style2} span={5}></Col>
+              <Col style={style2} span={5} ></Col>
             </Row>
+
           </div>
         </Content>
       </Layout>
