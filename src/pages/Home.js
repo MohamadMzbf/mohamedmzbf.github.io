@@ -1,10 +1,13 @@
-import { Layout, Menu, theme, Typography, Col, Divider, Row } from "antd";
+import { Layout,  theme, Typography, Col, Row } from "antd";
 import { useState, useRef } from "react";
 import { createFromIconfontCN } from "@ant-design/icons";
-import {FaBeer} from 'react-icons/fa'
-import {AiFillAmazonCircle} from 'react-icons/ai'
-import {DiJavascript1} from 'react-icons/di'
-
+import {FaReact,FaLaravel, FaHtml5, FaCss3Alt} from 'react-icons/fa';
+import {SiNestjs, SiTypescript,SiSpringboot, SiGit,SiDocker,SiAmazonaws,SiKubernetes} from 'react-icons/si'
+import {TbSql} from 'react-icons/tb'
+ import { Space, Tag,Tooltip ,Divider,Menu} from 'antd';
+ import Navbar from '../Components/Navbar'
+import Accueil from "./Accueil";
+ 
 
 
 
@@ -40,27 +43,25 @@ const Home = () => {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   return (
+
+    <>
+    <Navbar />
     <Layout>
       <Sider
-        width={120}
+        width={250}
         trigger={null}
         collapsible
         collapsed={collapsed}
-        style={{ background: "#0f0f0f" }}
+        style={{ background: "#000000" }}
       >
         <Col span={24}>
           <Row className="gutter-row">
             <Col style={style} span={24}>
-              <Title level={1} style={{ textAlign: "center", color: "white" }}>
+              <Title level={1} style={{ textAlign: "center", color: "#d4b106" }}>
                 M
               </Title>
-              <Title
-                level={5}
-                style={{ textAlign: "center", color: "white", margin: 6 }}
-              >
-                Mohamadou
-              </Title>
-              <Text
+              
+              {/* <Text
                 style={{
                   textAlign: "center",
                   color: "#818182",
@@ -69,128 +70,45 @@ const Home = () => {
                 }}
               >
                 Développeur Full Stack
-              </Text>
+              </Text> */}
             </Col>
           </Row>
-        </Col>
-        <Menu
-          mode="inline"
-          defaultSelectedKeys={["1"]}
-          items={[
-            {
-              key: "1",
-              label: "A propos",
-            },
-            {
-              key: "2",
-              label: "Mes Compétences",
-            },
-            {
-              key: "3",
-              label: "Mon Experience",
-            },
-            {
-              key: "4",
-              label: "Contact",
-            },
-            {
-              key: "4",
-              label: "Blog",
-            },
-          ]}
-        />
-      </Sider>
+        </Col> 
+         <Menu
+            mode="inline"
+            defaultSelectedKeys={["1"]}
+            style={{background:"black",fontSize:"26"}}
+            theme="dark"
+            items={[
+              {
+                key: "1",
+                label: "Home",
+              },
+              {
+                key: "2",
+                label: "Mes Compétences",
+              },
+              {
+                key: "3",
+                label: "Mon Experience",
+              },
+              {
+                key: "4",
+                label: "Contact",
+              },
+              {
+                key: "5",
+                label: "Blog",
+              },
+            ]}
+     /> 
+      </Sider> 
+      
       <Layout>
-        <Content
-          style={{
-            padding: 24,
-            minHeight: windowSize.current[1],
-            background: "#171717",
-          }}
-        >
-          <div>
-            <Row gutter={[32, 16]}>
-              <Col style={style2} span={5}></Col>
-              <Col style={style2} span={5}>
-                {" "}
-              </Col>
-              <Col style={style2} span={5}>
-                {" "}
-              </Col>
-              <Col style={style2} span={5}>
-                {" "}
-              </Col>
-            </Row>
-            <Row gutter={[32, 16]}>
-              <Col style={style2} span={20}>
-                <Text style={{ color: "white", fontSize: 45 }}>
-                  <i>Salam</i>, <br /> Je suis{" "}
-                  <b>
-                    {" "}
-                    <i>Mohamadou FAYE</i>
-                  </b>
-                  ,
-                  <br />
-                  Ingénieur Logiciel,Développeur Full Stack
-                </Text>
-              </Col>
-            </Row>
-            <Row gutter={[32, 16]}>
-              <Col style={style2} span={15}>
-                <p style={{ color: "#5e5e61" }}>
-                  <i>
-                    Développeur React js / Développeur Laravel / Développeur
-                    Nest Js
-                  </i>
-                </p>
-              </Col>
-
-              <Col style={style2} span={5}>
-                {" "}
-              </Col>
-            </Row>
-
-            <Row gutter={[32, 16]}>
-              <Col style={style2} span={2}>
-              <IconFont style={{fontSize : 25}}  type="icon-javascript" />
-              
-              </Col>
-              <Col style={style2} span={2}>
-              <IconFont style={{fontSize : 25}} 
-               type="icon-java" />
-   
-              </Col>
-              <Col style={style2} span={2} >
-              
-                  <IconFont style={{fontSize : 25}}  type="icon-python" />
-              </Col>
-              <Col style={style2} span={2} >
-
-                  <IconFont style={{fontSize : 25}}  type="icon-php" />
-              </Col>
-            </Row>
-
-            <Row gutter={[32, 16]}>
-              <Col style={style2} span={5}>
-                <FaBeer />
-              </Col>
-              <Col style={style2} span={2}>    
-                 <AiFillAmazonCircle style={{fontSize:50}} spin/>
-              </Col>
-              <Col style={style2} span={2} >
-              </Col>
-            </Row>
-
-            <Row gutter={[32, 16]}>
-              <Col style={style2} span={5}></Col>
-              <Col style={style2} span={5}></Col>
-              <Col style={style2} span={5} ></Col>
-            </Row>
-
-          </div>
-        </Content>
+        <Accueil/>
       </Layout>
     </Layout>
+    </>
   );
 };
 export default Home;
