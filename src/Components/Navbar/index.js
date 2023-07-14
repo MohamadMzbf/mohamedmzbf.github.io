@@ -25,7 +25,7 @@ const Navbar = () => {
       <Layout>
         <Layout.Header className="nav-header">
           <div className="logo">
-            <h1 className="brand-font">MZBF</h1>
+            <h1 className="brand-font">Mohamadou FAYE</h1>
           </div>
           <div className="navbar-menu">
             <Button className="menuButton" type="text" onClick={showDrawer}>
@@ -40,7 +40,7 @@ const Navbar = () => {
               placement="right"
               closable={true}
               onClose={showDrawer}
-              visible={visible}
+     
               style={{ zIndex: 99999 }}
             >
               <LeftMenu mode={"inline"} />
