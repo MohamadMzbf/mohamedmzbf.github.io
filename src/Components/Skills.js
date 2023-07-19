@@ -5,11 +5,13 @@ import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import TwitterIcon from "@mui/icons-material/Twitter";
+import JavascriptIcon from "@mui/icons-material/Javascript";
 
 import Tooltip from "@mui/material/Tooltip";
 
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme,
+  padding: 2,
   textAlign: "center",
   color: "secondary",
 }));
@@ -45,34 +47,41 @@ const Skills = () => {
             direction="column"
             justifyContent="center"
             alignItems="flex-end"
-            spacing={2}
+            spacing={1}
             xs={6}
             sm={6}
             md={6}
           >
-            <Grid item>
-              <Typography variant="h5">Languages</Typography>
-              <Tooltip title="LinkedIn" placement="top">
-                <Item theme="#003a8c">
-                  <TwitterIcon sx={{ color: "white", fontSize: "10px" }} />
-                </Item>
-              </Tooltip>
+            <Grid item direction="row">
+              <Grid item>
+                <Typography variant="h4">Languages </Typography>
+              </Grid>
             </Grid>
-
-            <Grid item>
-              <Typography variant="h5">Languages</Typography>
+            <Grid
+              item
+              container
+              justifyContent="flex-end"
+              alignItems="flex-end"
+              direction="row"
+              spacing={1}
+            >
+              <Grid item xs="auto">
+                <Tooltip title="LinkedIn" placement="top">
+                  <Item theme="#fff566">
+                    <JavascriptIcon sx={{ color: "black", fontSize: "50px" }} />
+                  </Item>
+                </Tooltip>
+              </Grid>
+              <Grid item xs="auto">
+                <Tooltip title="LinkedIn" placement="top">
+                  <Item theme="#fff566">
+                    <JavascriptIcon sx={{ color: "black", fontSize: "50px" }} />
+                  </Item>
+                </Tooltip>
+              </Grid>
             </Grid>
-            <Grid item>
-              <Typography variant="h5">Languages</Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="h5">Languages</Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="h5">Languages</Typography>
-            </Grid>
-            <Grid item>
-              <Typography variant="h5">Languages</Typography>
+            <Grid item direction="row">
+              <Item>Cell 3</Item>
             </Grid>
           </Grid>
         </Grid>
