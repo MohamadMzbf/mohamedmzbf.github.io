@@ -1,5 +1,6 @@
 import * as React from "react";
-import Container from "@mui/material/Container";
+import Container from "@mui/material/Box";
+import Box from "@mui/material/Box";
 import { experimentalStyled as styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
@@ -22,14 +23,14 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const Accueil = () => {
   return (
-    <Container sx={{ bgcolor: "#141414", height: "120vh" }}>
+    <Box sx={{ bgcolor: "#141414", height: "100%", width: "100%" }}>
       <Grid
         container
         direction="row"
         justifyContent="space-between"
         alignItems="center"
         spacing={4}
-        style={{ padding: "10% 0% 0% 10%" }}
+        style={{ padding: "10% 10% 10% 15%" }}
       >
         <Grid item lg="auto">
           <img
@@ -82,7 +83,7 @@ const Accueil = () => {
           </Grid>
         </Grid>
       </Grid>
-    </Container>
+    </Box>
   );
 };
 

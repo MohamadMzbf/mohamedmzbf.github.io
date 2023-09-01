@@ -3,6 +3,7 @@ import { useState, useRef } from "react";
 import Accueil from "../Components/Accueil";
 import Navbar from "../Components/Navbar";
 import Skills from "../Components/Skills";
+import Experience from "../Components/Experience";
 import Divider from "@mui/material/Divider";
 
 const Home = () => {
@@ -11,12 +12,12 @@ const Home = () => {
   const windowSize = useRef([window.innerWidth, window.innerHeight]);
 
   return (
-    <div style={{ background: "#141414" }}>
+    <>
       <Navbar />
       <Accueil />
-      <Divider />
       <Skills />
-    </div>
+      <Experience />
+    </>
   );
 };
 export default Home;
