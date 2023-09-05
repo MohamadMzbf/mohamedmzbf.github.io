@@ -14,9 +14,11 @@ import {
   MdTaskAlt,
   MdOutlineDone,
   MdPlace,
-  MdFlag,
+  MdOutlinePlayCircleFilled,
+  MdOutlineStopCircle,
 } from "react-icons/md";
-import { FaDotCircle } from "react-icons/fa";
+import { FaDotCircle, FaFlagCheckered } from "react-icons/fa";
+import { GiRaceCar } from "react-icons/gi";
 import { VscDebugStart } from "react-icons/vsc";
 import { LuChevronUpSquare } from "react-icons/lu";
 import Stepper from "@mui/material/Stepper";
@@ -179,13 +181,28 @@ adaptées à l'aide de React Native"
                   <StepLabel
                     sx={{
                       color: "aqua",
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={LuChevronUpSquare}
+                    StepIconComponent={MdOutlinePlayCircleFilled}
                   >
                     <Typography variant="h6" style={{ color: "aquamarine" }}>
-                      Jan. 2023
+                      February 06,2023
+                    </Typography>
+                  </StepLabel>
+                </Step>
+
+                <Step key={3} active={true}>
+                  <StepLabel
+                    sx={{
+                      color: "aqua",
+                      fontSize: 20,
+                      fontWeight: "medium",
+                    }}
+                    StepIconComponent={MdOutlineStopCircle}
+                  >
+                    <Typography variant="h6" style={{ color: "aquamarine" }}>
+                      January 31, 2023
                     </Typography>
                   </StepLabel>
                   <StepContent>
@@ -268,17 +285,31 @@ adaptées à l’aide de React Native"
                     </Grid>
                   </StepContent>
                 </Step>
-                <Step key={3} active={true}>
+                <Step key={4} active={true}>
                   <StepLabel
                     sx={{
                       color: "aqua",
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={LuChevronUpSquare}
+                    StepIconComponent={MdOutlinePlayCircleFilled}
                   >
                     <Typography variant="h6" style={{ color: "aquamarine" }}>
-                      Aug. 2022
+                      September 01,2022
+                    </Typography>
+                  </StepLabel>
+                </Step>
+                <Step key={5} active={true}>
+                  <StepLabel
+                    sx={{
+                      color: "aqua",
+                      fontSize: 20,
+                      fontWeight: "medium",
+                    }}
+                    StepIconComponent={MdOutlineStopCircle}
+                  >
+                    <Typography variant="h6" style={{ color: "aquamarine" }}>
+                      August 31, 2022
                     </Typography>
                   </StepLabel>
                   <StepContent>
@@ -365,27 +396,27 @@ adaptées à l'aide de React Native"
                   <StepLabel
                     sx={{
                       color: "aqua",
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={LuChevronUpSquare}
+                    StepIconComponent={MdOutlinePlayCircleFilled}
                   >
-                    <Typography variant="h5" style={{ color: "aquamarine" }}>
-                      March 2021
+                    <Typography variant="h6" style={{ color: "aquamarine" }}>
+                      March 15, 2021
                     </Typography>
                   </StepLabel>
                 </Step>
-                <Step key={4} active={true}>
+                <Step key={7} active={true}>
                   <StepLabel
                     sx={{
                       color: "aqua",
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={LuChevronUpSquare}
+                    StepIconComponent={MdOutlineStopCircle}
                   >
                     <Typography variant="h6" style={{ color: "aquamarine" }}>
-                      Feb. 2021
+                      February 28, 2021
                     </Typography>
                   </StepLabel>
                   <StepContent>
@@ -473,17 +504,31 @@ adaptées à l'aide de React Native"
                     </Grid>
                   </StepContent>
                 </Step>
-                <Step key={5} active={true}>
+                <Step key={8} active={true}>
                   <StepLabel
                     sx={{
                       color: "aqua",
                       fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={LuChevronUpSquare}
+                    StepIconComponent={MdOutlinePlayCircleFilled}
                   >
                     <Typography variant="h6" style={{ color: "aquamarine" }}>
-                      December
+                      December 01, 2020
+                    </Typography>
+                  </StepLabel>
+                </Step>
+                <Step key={9} active={true}>
+                  <StepLabel
+                    sx={{
+                      color: "aqua",
+                      fontSize: 20,
+                      fontWeight: "medium",
+                    }}
+                    StepIconComponent={MdOutlineStopCircle}
+                  >
+                    <Typography variant="h6" style={{ color: "aquamarine" }}>
+                      November 30, 2020
                     </Typography>
                   </StepLabel>
                   <StepContent>
@@ -566,35 +611,35 @@ adaptées à l'aide de React Native"
                     </Grid>
                   </StepContent>
                 </Step>
-                <Step key={6} active={true}>
+                <Step key={10} active={true}>
                   <StepLabel
                     sx={{
                       color: "aqua",
                       fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={LuChevronUpSquare}
+                    StepIconComponent={MdOutlinePlayCircleFilled}
                   >
                     <Typography variant="h6" style={{ color: "aquamarine" }}>
-                      July
+                      July 01, 2020
                     </Typography>
                   </StepLabel>
                 </Step>
 
-                <Step key={6} active={true}>
+                {/* <Step key={8} active={true}>
                   <StepLabel
                     sx={{
                       color: "aqua",
-                      fontSize: 24,
+                      fontSize: 20,
                       fontWeight: "medium",
                     }}
-                    StepIconComponent={MdFlag}
+                    StepIconComponent={MdOutlinePlayCircleFilled}
                   >
-                    <Typography variant="h5" style={{ color: "aquamarine" }}>
-                      2020
+                    <Typography variant="h-" style={{ color: "aquamarine" }}>
+                      September 01,2022
                     </Typography>
                   </StepLabel>
-                </Step>
+                </Step> */}
               </Stepper>
             </Grid>
           </Grid>
